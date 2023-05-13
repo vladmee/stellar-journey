@@ -1,3 +1,7 @@
+@import 'mixins';
+
+@include generateBackground(destination);
+
 .destination {
   background-color: #ffd1dc;
 }

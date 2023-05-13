@@ -1,4 +1,7 @@
-@import '../styles/colors';
+@import 'colors';
+@import 'mixins';
+
+@include generateBackground(home);
 
 .home {
   padding: 15px 30px;
