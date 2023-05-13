@@ -1,8 +1,30 @@
-import { Inter } from 'next/font/google';
+import { Bellefair, Barlow, Barlow_Condensed } from 'next/font/google';
 
 import '@/styles/main.scss';
 
-const inter = Inter({ subsets: ['latin'] });
+export const bellefair = Bellefair({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-bellefair',
+});
+
+export const barlow = Barlow({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-barlow',
+});
+
+export const barlow_condensed = Barlow_Condensed({
+  weight: '400',
+  style: 'normal',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-barlow-condensed',
+});
 
 export const metadata = {
   title: 'Stellar Journey',
@@ -16,7 +38,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${bellefair.variable} ${barlow.variable} ${barlow_condensed.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
