@@ -1,0 +1,110 @@
+@import 'mixins';
+
+.dest-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 320px;
+  text-align: center;
+  @include tablet {
+    max-width: 580px;
+    text-align: center;
+  }
+  @include desktop {
+    text-align: left;
+    max-width: 1100px;
+    flex-direction: row;
+  }
+}
+.dest-image-container {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  @include tablet {
+    padding: 50px;
+  }
+  @include desktop {
+    flex: 1;
+  }
+
+  .image-wrapper {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    @include tablet {
+      width: 300px;
+      height: 300px;
+    }
+    @include desktop {
+      width: 445px;
+      height: 445px;
+    }
+  }
+}
+.dest-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    flex: 1;
+    align-items: flex-start;
+  }
+
+  h2 {
+    display: block;
+    margin-bottom: 12px;
+    @include tablet {
+      margin-bottom: 12px;
+    }
+  }
+
+  hr {
+    margin: 32px 0;
+    @include tablet {
+      margin: 50px 0;
+    }
+    @include desktop {
+      margin: 50px 0 24px 0;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    @include desktop {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  }
+
+  .detail {
+    margin-bottom: 32px;
+    @include tablet {
+      margin-bottom: 32px;
+    }
+    @include desktop {
+      &:first-of-type {
+        margin-right: 80px;
+      }
+    }
+
+    label {
+      display: block;
+      margin-bottom: 12px;
+      @include tablet {
+        margin-bottom: 12px;
+      }
+      @include desktop {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+import StepTitle from '@/components/StepTitle';
 import styles from './destination.module.scss';
 
 export const metadata = {
@@ -12,7 +13,10 @@ export default function RootLayout({
 }) {
   return (
     <main className={styles['background-destination']}>
-      <div className={styles.destination}>{children}</div>
+      <div className={styles.step}>
+        <StepTitle stepNo="01" stepTitle="Pick your destination" />
+        {children}
+      </div>
     </main>
   );
 }

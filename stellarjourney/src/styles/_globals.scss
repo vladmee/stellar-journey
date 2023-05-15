@@ -28,6 +28,9 @@ body > main:first-child {
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 a {

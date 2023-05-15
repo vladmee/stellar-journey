@@ -22,9 +22,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/components/*": ["./src/app/components/*"],
+      "@/components/*": ["./src/components/*"],
       "@/images/*": ["./public/images/*"],
-      "@/styles/*": ["./src/app/styles/*"],
+      "@/styles/*": ["./src/styles/*"],
       "@/pages/*": ["./src/app/(pages)/*"]
     }
   },

@@ -2,6 +2,16 @@
 
 @include generateBackground(destination);
 
-.destination {
-  background-color: #ffd1dc;
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet {
+    align-items: flex-start;
+  }
+
+  @include desktop {
+    align-items: flex-start;
+  }
 }
