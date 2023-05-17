@@ -1,5 +1,6 @@
 import { Bellefair, Barlow, Barlow_Condensed } from 'next/font/google';
 
+import 'normalize.css/normalize.css';
 import '@/styles/main.scss';
 
 export const bellefair = Bellefair({
