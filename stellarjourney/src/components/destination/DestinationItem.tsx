@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useStore } from '@/store/store';
 
 import styles from './destination-item.module.scss';
+import DestinationNav from './DestinationNav';
 
 function DestinationItem() {
   const destinations = useStore((state) => state.destinations);
@@ -21,7 +22,7 @@ function DestinationItem() {
         </div>
       </div>
       <div className={styles['dest-info-container']}>
-        {/* <DestNav /> */}
+        <DestinationNav />
         <h2>{destinations[current].name}</h2>
         <p>{destinations[current].description}</p>
         <hr />
