@@ -18,19 +18,16 @@ body {
 body {
   background-color: $primary-color;
   color: $text-color;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-body > main:first-child {
+main {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 a {

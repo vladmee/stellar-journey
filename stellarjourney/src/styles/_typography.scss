@@ -101,19 +101,6 @@ label {
     font-size: 14px;
   }
 }
-.nav-text {
-  font-family: var(--font-barlow-condensed);
-  font-size: 16px;
-  letter-spacing: 2.7px;
-  text-transform: uppercase;
-  color: $subtext-color;
-  @include tablet {
-    font-size: 16px;
-  }
-  @include desktop {
-    font-size: 16px;
-  }
-}
 
 hr {
   height: 1px;

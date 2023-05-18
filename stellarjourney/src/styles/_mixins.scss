@@ -1,25 +1,7 @@
-@mixin generateBackground($page) {
-  .background-#{$page} {
-    background-image: url('/images/#{$page}/background-#{$page}-mobile.jpg');
-  }
+@import 'spacing';
 
-  /* Background for tablet */
-  @media (min-width: 768px) {
-    .background-#{$page} {
-      background-image: url('/images/#{$page}/background-#{$page}-tablet.jpg');
-    }
-  }
-
-  /* Background for desktop */
-  @media (min-width: 1024px) {
-    .background-#{$page} {
-      background-image: url('/images/#{$page}/background-#{$page}-desktop.jpg');
-    }
-  }
-}
-
-@mixin desktop {
-  @media screen and (min-width: 961px) {
+@mixin mobile {
+  @media screen and (max-width: 576px) {
     @content;
   }
 }
@@ -30,8 +12,38 @@
   }
 }
 
-@mixin mobile {
-  @media screen and (max-width: 576px) {
+@mixin desktop {
+  @media screen and (min-width: 961px) {
     @content;
+  }
+}
+
+@mixin generateBackground($page) {
+  .background-#{$page} {
+    background-image: url('/images/#{$page}/background-#{$page}-mobile.jpg');
+  }
+
+  @include tablet {
+    .background-#{$page} {
+      background-image: url('/images/#{$page}/background-#{$page}-tablet.jpg');
+    }
+  }
+
+  @include desktop {
+    .background-#{$page} {
+      background-image: url('/images/#{$page}/background-#{$page}-desktop.jpg');
+    }
+  }
+}
+
+@mixin containerMaxWidth($mobile, $tablet, $desktop) {
+  max-width: $mobile;
+
+  @include tablet {
+    max-width: $tablet;
+  }
+
+  @include desktop {
+    max-width: $desktop;
   }
 }
