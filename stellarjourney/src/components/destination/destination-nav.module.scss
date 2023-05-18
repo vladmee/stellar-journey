@@ -1,8 +1,9 @@
 @import 'colors';
+@import 'spacing';
 @import 'mixins';
 
 .destination-nav {
-  margin-bottom: 24px;
+  margin-bottom: $margin-m;
   width: 250px;
 
   ul {

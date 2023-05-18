@@ -1,3 +1,4 @@
+@import 'spacing';
 @import 'mixins';
 
 .step-title {
@@ -11,7 +12,7 @@
   }
   @include desktop {
     font-size: 28px;
-    margin-bottom: 64px;
+    margin-bottom: $margin-xl;
   }
 
   span {
