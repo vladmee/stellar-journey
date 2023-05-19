@@ -1,5 +1,4 @@
 import DestinationItem from '@/components/destination/DestinationItem';
-import styles from './destination.module.scss';
 
 import StoreInitializer from '@/components/destination/StoreInitializer';
 import { Destination } from '@/data/types';

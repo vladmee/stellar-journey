@@ -1,0 +1,47 @@
+@import 'colors';
+@import 'spacing';
+@import 'mixins';
+
+.crew-nav {
+  @include mobile {
+    order: 1;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: $margin-m;
+  }
+
+  li {
+    opacity: 0.17;
+    transition: all 0.2s;
+    background-color: $text-color;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include tablet {
+      width: 10px;
+      height: 10px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &.active {
+      opacity: 1;
+      cursor: default;
+
+      &:hover,
+      &:focus {
+        opacity: 1;
+      }
+    }
+  }
+}

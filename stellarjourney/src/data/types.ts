@@ -9,3 +9,22 @@ export interface Destination {
   distance: string;
   travel: string;
 }
+
+export interface CrewMember {
+  name: string;
+  images: {
+    png: string;
+    webp: string;
+  };
+  role: string;
+  bio: string;
+}
+
+export interface Technology {
+  name: string;
+  images: {
+    portrait: string;
+    landscape: string;
+  };
+  description: string;
+}
