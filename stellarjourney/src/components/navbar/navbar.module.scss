@@ -172,20 +172,33 @@
   justify-content: center;
   column-gap: 12px;
 
+  &::after {
+    display: none;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: $text-color;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    &::after {
+      display: block;
+      opacity: 0.5;
+    }
+  }
   &.active {
     &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      height: 3px;
-      background-color: $text-color;
-      left: 0;
-      right: 0;
-      width: 100%;
-
-      @include mobile {
-        display: none;
-      }
+      display: block;
+      opacity: 1;
     }
   }
 
