@@ -3,15 +3,15 @@
 
 .step-title {
   font-family: var(--font-barlow-condensed);
-  font-size: 16px;
-  letter-spacing: 2.7px;
+  font-size: 1rem;
+  letter-spacing: 0.16875em;
   text-transform: uppercase;
 
   @include tablet {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
   @include desktop {
-    font-size: 28px;
+    font-size: 1.75rem;
     margin-bottom: $margin-xl;
   }
 

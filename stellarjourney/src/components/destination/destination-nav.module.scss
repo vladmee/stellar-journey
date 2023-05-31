@@ -16,17 +16,17 @@
   li {
     position: relative;
     font-family: var(--font-barlow-condensed);
-    font-size: 16px;
-    letter-spacing: 2.7px;
+    font-size: 1rem;
+    letter-spacing: 0.16875em;
     text-transform: uppercase;
     color: $subtext-color;
     cursor: pointer;
 
     @include tablet {
-      font-size: 16px;
+      font-size: 1rem;
     }
     @include desktop {
-      font-size: 16px;
+      font-size: 1rem;
     }
 
     &::after {

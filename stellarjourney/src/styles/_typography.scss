@@ -14,92 +14,91 @@ h4 {
 }
 
 h1 {
-  font-size: 100px;
+  font-size: 6.25rem;
   @include tablet {
-    font-size: 150px;
+    font-size: 9.375rem;
   }
   @include desktop {
-    font-size: 150px;
+    font-size: 9.375rem;
   }
 }
 h2 {
-  font-size: 56px;
+  font-size: 3.5rem;
   @include tablet {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
   @include desktop {
-    font-size: 80px;
+    font-size: 5rem;
   }
 }
 h3 {
-  font-size: 32px;
+  font-size: 2rem;
   @include tablet {
-    font-size: 56px;
+    font-size: 3.5rem;
   }
   @include desktop {
-    font-size: 56px;
-    line-height: 64px;
+    font-size: 3.5rem;
+    line-height: 1.15;
   }
 }
 h4 {
-  font-size: 28px;
+  font-size: 1.75rem;
   @include tablet {
-    font-size: 32px;
+    font-size: 2rem;
   }
   @include desktop {
-    font-size: 32px;
+    font-size: 2rem;
   }
 }
 h5 {
   font-family: var(--font-barlow-condensed);
-  font-size: 14px;
-  letter-spacing: 4.75px;
+  font-size: 0.875rem;
+  letter-spacing: 0.296875em;
   color: $subtext-color;
   @include tablet {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   @include desktop {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 
 p {
   font-family: var(--font-barlow);
-  font-size: 15px;
+  font-size: 1rem;
   color: $subtext-color;
-  line-height: 25px;
   @include tablet {
-    font-size: 16px;
-    line-height: 28px;
+    font-size: 1rem;
+    line-height: 1.75;
   }
   @include desktop {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 1.125rem;
+    line-height: 1.25;
   }
 }
 h6 {
   font-family: var(--font-bellefair);
-  font-size: 28px;
+  font-size: 1.75rem;
   text-transform: uppercase;
   color: $text-color;
   @include tablet {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
   @include desktop {
-    font-size: 28px;
+    font-size: 1.75rem;
   }
 }
 label {
   font-family: var(--font-barlow-condensed);
-  font-size: 14px;
-  letter-spacing: 2.35px;
+  font-size: 0.875rem;
+  letter-spacing: 0.146875em;
   text-transform: uppercase;
   color: $subtext-color;
   @include tablet {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   @include desktop {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
 }
 
