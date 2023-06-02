@@ -4,6 +4,132 @@
 @include generateBackground(home);
 
 .home {
-  padding: 15px 30px;
-  border: 1px solid $primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  column-gap: 50px;
+  width: 100%;
+
+  @include mobile {
+    max-width: $container-mobile;
+  }
+
+  @include tablet {
+    max-width: $container-tablet;
+  }
+
+  @include desktop {
+    padding-top: 250px;
+    max-width: $container-desktop;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+.home-info {
+  @include mobile {
+    margin-bottom: $margin-xl;
+  }
+
+  @include tablet {
+    margin-bottom: $margin-xl;
+  }
+
+  @include desktop {
+    max-width: 450px;
+    align-self: flex-end;
+  }
+
+  h4 {
+    display: block;
+    margin-bottom: $margin-s;
+    font-family: var(--font-barlow-condensed);
+    font-size: 1rem;
+    letter-spacing: 0.16875em;
+    text-transform: uppercase;
+    color: $subtext-color;
+
+    @include desktop {
+      font-size: 1.75rem;
+    }
+  }
+
+  h3 {
+    display: block;
+    margin-bottom: $margin-m;
+  }
+
+  p {
+    @include mobile {
+      font-size: 1rem;
+      min-height: 125px;
+    }
+  }
+}
+
+.home-btn {
+  @include desktop {
+    align-self: flex-end;
+  }
+
+  a {
+    width: 150px;
+    height: 150px;
+    background-color: $text-color;
+    border-radius: 50%;
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    letter-spacing: 0.16875em;
+    display: grid;
+    place-content: center;
+    font-family: var(--font-bellefair);
+    position: relative;
+    z-index: 2;
+
+    @include tablet {
+      width: 242px;
+      height: 242px;
+      font-size: 2rem;
+    }
+
+    @include desktop {
+      width: 274px;
+      height: 274px;
+      font-size: 2rem;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      background-color: $text-color;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+      z-index: -1;
+    }
+
+    &:hover::after {
+      width: 450px;
+      height: 450px;
+      opacity: 0.1;
+
+      @include mobile {
+        width: 300px;
+        height: 300px;
+      }
+      @include tablet {
+        width: 350px;
+        height: 350px;
+      }
+    }
+  }
 }
