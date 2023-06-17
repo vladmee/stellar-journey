@@ -13,14 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className={`${styles['background-technology']} ${styles['main']}`}>
+    <main className={styles['background-technology']}>
       <Navbar />
-      <div className={styles['step']}>
-        <div className={styles['technology-step']}>
-          <StepTitle stepNo="03" stepTitle="SPACE LAUNCH 101" />
-        </div>
+      <section className={styles['section-technology']}>
+        <StepTitle stepNo="03" stepTitle="SPACE LAUNCH 101" />
         {children}
-      </div>
+      </section>
     </main>
   );
 }

@@ -3,17 +3,11 @@
 
 .step-title {
   font-family: var(--font-barlow-condensed);
-  font-size: 1rem;
+  font-size: clamp(1rem, 2vw, 1.75rem);
+  line-height: 1.5;
   letter-spacing: 0.16875em;
   text-transform: uppercase;
-
-  @include tablet {
-    font-size: 1.25rem;
-  }
-  @include desktop {
-    font-size: 1.75rem;
-    margin-bottom: $margin-xl;
-  }
+  margin-bottom: clamp(2rem, 5vw, 4rem);
 
   span {
     opacity: 0.25;

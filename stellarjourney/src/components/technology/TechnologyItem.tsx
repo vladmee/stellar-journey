@@ -30,7 +30,7 @@ function TechnologyItem() {
       </div>
       <TechnologyNav />
       <div className={styles['technology-info-container']}>
-        <h4>THE TERMINOLOGY…</h4>
+        <h5>THE TERMINOLOGY…</h5>
         <h3>{technology[current].name}</h3>
         <p>{technology[current].description}</p>
       </div>

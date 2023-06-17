@@ -15,10 +15,10 @@ export default function RootLayout({
   return (
     <main className={styles['background-destination']}>
       <Navbar />
-      <div className={styles.step}>
+      <section>
         <StepTitle stepNo="01" stepTitle="Pick your destination" />
         {children}
-      </div>
+      </section>
     </main>
   );
 }

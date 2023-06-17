@@ -8,99 +8,50 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  column-gap: 50px;
+  gap: 3.125rem;
   width: 100%;
 
-  @include mobile {
-    max-width: $container-mobile;
-  }
-
-  @include tablet {
-    max-width: $container-tablet;
-  }
-
   @include desktop {
-    padding-top: 250px;
-    max-width: $container-desktop;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
     text-align: left;
+
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 .home-info {
-  @include mobile {
-    margin-bottom: $margin-xl;
-  }
-
-  @include tablet {
-    margin-bottom: $margin-xl;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: $margin-s;
 
   @include desktop {
-    max-width: 450px;
-    align-self: flex-end;
-  }
-
-  h4 {
-    display: block;
-    margin-bottom: $margin-s;
-    font-family: var(--font-barlow-condensed);
-    font-size: 1rem;
-    letter-spacing: 0.16875em;
-    text-transform: uppercase;
-    color: $subtext-color;
-
-    @include desktop {
-      font-size: 1.75rem;
-    }
-  }
-
-  h3 {
-    display: block;
-    margin-bottom: $margin-m;
-  }
-
-  p {
-    @include mobile {
-      font-size: 1rem;
-      min-height: 125px;
-    }
+    max-width: clamp(25rem, 20vw, 30rem);
+    align-self: end;
+    justify-self: start;
   }
 }
 
 .home-btn {
   @include desktop {
-    align-self: flex-end;
+    align-self: end;
+    justify-self: end;
   }
 
   a {
-    width: 150px;
-    height: 150px;
+    width: clamp(150px, 20vw, 274px);
+    height: clamp(150px, 20vw, 274px);
     background-color: $text-color;
     border-radius: 50%;
     color: $primary-color;
     text-transform: uppercase;
-    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 2vw, 2rem);
     letter-spacing: 0.16875em;
     display: grid;
     place-content: center;
     font-family: var(--font-bellefair);
     position: relative;
     z-index: 2;
-
-    @include tablet {
-      width: 242px;
-      height: 242px;
-      font-size: 2rem;
-    }
-
-    @include desktop {
-      width: 274px;
-      height: 274px;
-      font-size: 2rem;
-    }
 
     &::after {
       content: '';
@@ -118,18 +69,9 @@
     }
 
     &:hover::after {
-      width: 450px;
-      height: 450px;
+      width: clamp(200px, 25vw, 400px);
+      height: clamp(200px, 25vw, 400px);
       opacity: 0.1;
-
-      @include mobile {
-        width: 300px;
-        height: 300px;
-      }
-      @include tablet {
-        width: 350px;
-        height: 350px;
-      }
     }
   }
 }

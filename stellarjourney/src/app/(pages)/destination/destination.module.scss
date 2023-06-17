@@ -1,17 +1,3 @@
 @import 'mixins';
 
 @include generateBackground(destination);
-
-.step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  @include tablet {
-    align-items: flex-start;
-  }
-
-  @include desktop {
-    align-items: flex-start;
-  }
-}

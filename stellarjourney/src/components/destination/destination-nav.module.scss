@@ -3,14 +3,13 @@
 @import 'mixins';
 
 .destination-nav {
-  margin-bottom: $margin-m;
-  width: 250px;
+  margin-bottom: calc($margin-s + 10px);
 
   ul {
-    list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 1.5rem;
   }
 
   li {
@@ -21,13 +20,6 @@
     text-transform: uppercase;
     color: $subtext-color;
     cursor: pointer;
-
-    @include tablet {
-      font-size: 1rem;
-    }
-    @include desktop {
-      font-size: 1rem;
-    }
 
     &::after {
       display: none;

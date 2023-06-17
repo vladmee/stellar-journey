@@ -7,21 +7,15 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  column-gap: 34px;
+  gap: clamp(2.125rem, 5vw, 5rem);
   width: 100%;
 
-  @include mobile {
-    margin-top: $margin-l;
-  }
-  @include tablet {
-    margin-top: 50px;
-  }
   @include desktop {
     text-align: left;
     flex-direction: row;
-    column-gap: 80px;
   }
 }
+
 .technology-image-container {
   width: 100%;
   position: relative;
@@ -46,15 +40,12 @@
 
   @include mobile {
     order: 1;
-    margin-bottom: $margin-m;
 
     .mobile-image {
       display: block;
     }
   }
-  @include tablet {
-    margin-bottom: $margin-m;
-
+  @include tabletOnly {
     .mobile-image {
       display: block;
     }
@@ -79,44 +70,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: $margin-s;
   order: 2;
 
-  @include mobile {
-    max-width: $container-mobile;
-  }
-  @include tablet {
-    max-width: $container-tablet;
-  }
   @include desktop {
     align-items: flex-start;
     flex-grow: 1;
     flex-basis: 40%;
   }
 
-  h4 {
-    display: block;
-    margin-bottom: $margin-s;
-    font-family: var(--font-barlow-condensed);
-    font-size: 1rem;
-    letter-spacing: 0.16875em;
-    text-transform: uppercase;
-    color: $subtext-color;
-  }
-
-  h3 {
-    display: block;
-    margin-bottom: $margin-s;
-  }
-
   p {
-    display: block;
-    margin-bottom: $margin-m;
-    min-height: 125px;
-
-    @include mobile {
-      height: auto;
-      font-size: 1rem;
-      min-height: 125px;
+    @include desktop {
+      min-height: 8rem;
     }
   }
 }

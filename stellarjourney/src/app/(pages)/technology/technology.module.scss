@@ -2,25 +2,8 @@
 
 @include generateBackground(technology);
 
-.main {
-  height: 100%;
-}
-
-.step {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.technology-step {
-  @include mobile {
-    width: $container-mobile;
-  }
-  @include tablet {
-    width: $container-tablet;
-  }
+section.section-technology {
   @include desktop {
-    width: $container-desktop;
+    padding-right: 0;
   }
 }

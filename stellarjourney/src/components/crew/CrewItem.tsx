@@ -13,11 +13,13 @@ function CrewItem() {
   return (
     <div className={styles['crew-item']}>
       <div className={styles['crew-info-container']}>
-        <h4>{crew[current].role}</h4>
-        <div className={styles['name-wrapper']}>
-          <h3>{crew[current].name}</h3>
+        <div className={styles['crew-content']}>
+          <h4>{crew[current].role}</h4>
+          <div className={styles['name-wrapper']}>
+            <h3>{crew[current].name}</h3>
+          </div>
+          <p>{crew[current].bio}</p>
         </div>
-        <p>{crew[current].bio}</p>
         <CrewNav />
       </div>
       <div className={styles['crew-image-container']}>

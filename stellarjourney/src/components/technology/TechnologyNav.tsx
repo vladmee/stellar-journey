@@ -10,7 +10,7 @@ function TechnologyNav() {
 
   return (
     <nav className={styles['technology-nav']}>
-      <ul>
+      <ul role="list">
         {technology.map((tech, index) => {
           return (
             <li

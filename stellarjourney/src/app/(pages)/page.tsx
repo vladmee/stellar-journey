@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <main className={styles['background-home']}>
       <Navbar />
-      <div className={styles.home}>
+      <section className={styles['home']}>
         <div className={styles['home-info']}>
-          <h4>SO, YOU WANT TO TRAVEL TO</h4>
+          <h5>SO, YOU WANT TO TRAVEL TO</h5>
           <h1>SPACE</h1>
           <p>
             Let&rsquo;s face it; if you want to go to space, you might as well
@@ -20,7 +20,7 @@ export default function Home() {
         <div className={styles['home-btn']}>
           <Link href={'/destination'}>Explore</Link>
         </div>
-      </div>
+      </section>
     </main>
   );
 }

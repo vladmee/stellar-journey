@@ -10,7 +10,7 @@ function CrewNav() {
 
   return (
     <nav className={styles['crew-nav']}>
-      <ul>
+      <ul role="list">
         {crew.map((member, index) => {
           return (
             <li

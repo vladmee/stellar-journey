@@ -8,13 +8,16 @@ html {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
   font-family: var(--font-bellefair);
   text-transform: uppercase;
 }
 
 h1 {
   font-size: 6.25rem;
+  line-height: 1;
   @include tablet {
     font-size: 9.375rem;
   }
@@ -24,6 +27,7 @@ h1 {
 }
 h2 {
   font-size: 3.5rem;
+  line-height: 1.25;
   @include tablet {
     font-size: 3.5rem;
   }
@@ -33,16 +37,17 @@ h2 {
 }
 h3 {
   font-size: 2rem;
+  line-height: 1.5;
   @include tablet {
     font-size: 3.5rem;
   }
   @include desktop {
     font-size: 3.5rem;
-    line-height: 1.15;
   }
 }
 h4 {
   font-size: 1.75rem;
+  line-height: 1.5;
   @include tablet {
     font-size: 2rem;
   }
@@ -52,8 +57,9 @@ h4 {
 }
 h5 {
   font-family: var(--font-barlow-condensed);
-  font-size: 0.875rem;
-  letter-spacing: 0.296875em;
+  font-size: 1rem;
+  line-height: 1.5;
+  letter-spacing: 0.16875em;
   color: $subtext-color;
   @include tablet {
     font-size: 1.75rem;
@@ -61,45 +67,27 @@ h5 {
   @include desktop {
     font-size: 1.75rem;
   }
+}
+h6 {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  color: $text-color;
 }
 
 p {
   font-family: var(--font-barlow);
-  font-size: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75;
   color: $subtext-color;
-  @include tablet {
-    font-size: 1rem;
-    line-height: 1.75;
-  }
-  @include desktop {
-    font-size: 1.125rem;
-    line-height: 1.25;
-  }
 }
-h6 {
-  font-family: var(--font-bellefair);
-  font-size: 1.75rem;
-  text-transform: uppercase;
-  color: $text-color;
-  @include tablet {
-    font-size: 1.75rem;
-  }
-  @include desktop {
-    font-size: 1.75rem;
-  }
-}
+
 label {
   font-family: var(--font-barlow-condensed);
   font-size: 0.875rem;
+  line-height: 1.5;
   letter-spacing: 0.146875em;
   text-transform: uppercase;
   color: $subtext-color;
-  @include tablet {
-    font-size: 0.875rem;
-  }
-  @include desktop {
-    font-size: 0.875rem;
-  }
 }
 
 hr {

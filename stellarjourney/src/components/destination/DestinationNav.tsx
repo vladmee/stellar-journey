@@ -10,7 +10,7 @@ function DestinationNav() {
 
   return (
     <nav className={styles['destination-nav']}>
-      <ul>
+      <ul role="list">
         {destinations.map((dest, index) => {
           return (
             <li

@@ -3,8 +3,6 @@
 @import 'mixins';
 
 .technology-nav {
-  margin-bottom: $margin-m;
-
   @include mobile {
     order: 2;
   }
@@ -15,15 +13,13 @@
   }
 
   ul {
-    list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    column-gap: $margin-m;
+    gap: $margin-m;
 
     @include desktop {
       flex-direction: column;
-      row-gap: $margin-m;
       align-items: flex-end;
     }
   }
@@ -31,26 +27,14 @@
   li {
     transition: all 0.2s;
     color: $text-color;
-    font-size: 1rem;
-    width: 40px;
-    height: 40px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    width: clamp(2.5rem, 5vw, 5rem);
+    height: clamp(2.5rem, 5vw, 5rem);
     border-radius: 50%;
     border: 1px solid $border-color;
     cursor: pointer;
     display: grid;
     place-content: center;
-
-    @include tablet {
-      width: 60px;
-      height: 60px;
-      font-size: 1.5rem;
-    }
-
-    @include desktop {
-      width: 80px;
-      height: 80px;
-      font-size: 2rem;
-    }
 
     &:hover,
     &:focus {

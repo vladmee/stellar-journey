@@ -5,73 +5,43 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: $container-mobile;
   text-align: center;
-  @include tablet {
-    max-width: $container-tablet;
-    text-align: center;
-  }
+
   @include desktop {
     text-align: left;
-    max-width: $container-desktop;
     flex-direction: row;
   }
 }
 .dest-image-container {
   display: grid;
   place-items: center;
-  padding: $margin-m;
-  @include tablet {
-    padding: 50px;
-  }
+  padding: clamp(1.5rem, 5vh, 3.5rem);
+
   @include desktop {
     flex: 1;
   }
 
   .image-wrapper {
     position: relative;
-    width: 170px;
-    height: 170px;
-    @include tablet {
-      width: 300px;
-      height: 300px;
-    }
-    @include desktop {
-      width: 445px;
-      height: 445px;
-    }
+    width: clamp(10rem, 30vw, 27rem);
+    height: clamp(10rem, 30vw, 27rem);
   }
 }
 .dest-info-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: $margin-s;
+  max-width: clamp(10rem * 2, 30vw * 2, 27rem * 2);
+
   @include desktop {
     flex: 1;
     align-items: flex-start;
   }
 
-  h2 {
-    display: block;
-    margin-bottom: $margin-s;
-    @include tablet {
-      margin-bottom: $margin-s;
-    }
-  }
-
   p {
     @include desktop {
-      height: 100px;
-    }
-  }
-
-  hr {
-    margin: $margin-l 0;
-    @include tablet {
-      margin: 50px 0;
-    }
-    @include desktop {
-      margin: 50px 0 $margin-m 0;
+      min-height: 6.25rem;
     }
   }
 
@@ -79,39 +49,18 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    gap: 2.5rem;
     width: 100%;
+
     @include tablet {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
     }
+
     @include desktop {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
-    }
-  }
-
-  .detail {
-    margin-bottom: $margin-l;
-    @include tablet {
-      margin-bottom: $margin-l;
-    }
-    @include desktop {
-      &:first-of-type {
-        margin-right: 80px;
-      }
-    }
-
-    label {
-      display: block;
-      margin-bottom: $margin-s;
-      @include tablet {
-        margin-bottom: $margin-s;
-      }
-      @include desktop {
-        margin-bottom: $margin-s;
-      }
     }
   }
 }

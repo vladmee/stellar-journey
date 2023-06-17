@@ -7,106 +7,76 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: $container-mobile;
   text-align: center;
-  column-gap: 50px;
+  justify-content: space-between;
+  gap: clamp(2.5rem, 10vw, 5rem);
 
-  @include mobile {
-    margin-top: $margin-l;
-  }
   @include tablet {
-    max-width: $container-tablet;
     text-align: center;
-    margin-top: 50px;
   }
   @include desktop {
     text-align: left;
-    max-width: $container-desktop;
     flex-direction: row;
   }
 }
 .crew-image-container {
-  display: grid;
-  place-items: center;
-  height: 100%;
-  width: 100%;
-  position: relative;
+  order: 1;
   flex: 1;
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-bottom: 3px solid $border-color;
 
-  @include mobile {
-    order: 1;
-    flex: auto;
-    height: auto;
-    border-bottom: 3px solid $border-color;
-    margin-bottom: $margin-l;
-  }
-  @include tablet {
-    margin-top: $margin-xl;
-  }
-
-  img {
-    object-fit: none;
+  @include desktop {
+    order: 2;
+    flex: 1 0 0;
+    width: auto;
+    height: 70vh;
+    border-bottom: 0;
   }
 }
 .crew-info-container {
+  order: 2;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: clamp(1rem, 10vw, 2.5rem);
 
-  @include mobile {
-    order: 2;
-  }
   @include desktop {
-    flex: 1;
+    order: 1;
+    flex: 1 0 0;
     align-items: flex-start;
   }
 
-  h4 {
-    display: block;
-    margin-bottom: $margin-s;
-    opacity: 0.5;
+  .crew-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $margin-s;
 
-    @include mobile {
-      order: 2;
-      margin-top: $margin-l;
-      font-size: 1rem;
-    }
-    @include tablet {
-      font-size: 1.5rem;
+    @include desktop {
+      order: 1;
+      align-items: flex-start;
     }
   }
 
-  .name-wrapper {
-    margin-bottom: $margin-s;
+  h4 {
+    opacity: 0.5;
+  }
 
-    @include mobile {
-      order: 2;
-      font-size: 1.5rem;
-    }
+  .name-wrapper {
     @include desktop {
-      min-height: 128px;
+      min-height: 8rem;
       display: flex;
       flex-direction: row;
       align-items: center;
     }
-
-    h3 {
-      @include tablet {
-        font-size: 2.5rem;
-      }
-    }
   }
 
   p {
-    display: block;
-    margin-bottom: $margin-m;
-    min-height: 100px;
-
-    @include mobile {
-      height: auto;
-      order: 2;
-      font-size: 1rem;
-      min-height: 125px;
+    @include desktop {
+      min-height: 8rem;
     }
   }
 }

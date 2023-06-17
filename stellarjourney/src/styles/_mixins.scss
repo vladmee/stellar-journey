@@ -1,19 +1,25 @@
 @import 'spacing';
 
 @mixin mobile {
-  @media screen and (max-width: 576px) {
+  @media screen and (max-width: 48em) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: 577px) and (max-width: 960px) {
+  @media screen and (min-width: 48.0625em) {
+    @content;
+  }
+}
+
+@mixin tabletOnly {
+  @media screen and (min-width: 48.0625em) and (max-width: 90em) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: 961px) {
+  @media screen and (min-width: 90.0625em) {
     @content;
   }
 }
@@ -33,17 +39,5 @@
     .background-#{$page} {
       background-image: url('/images/#{$page}/background-#{$page}-desktop.jpg');
     }
-  }
-}
-
-@mixin containerMaxWidth($mobile, $tablet, $desktop) {
-  max-width: $mobile;
-
-  @include tablet {
-    max-width: $tablet;
-  }
-
-  @include desktop {
-    max-width: $desktop;
   }
 }
