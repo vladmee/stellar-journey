@@ -17,10 +17,10 @@
 
 ### Screenshots
 
-![](./screenshots/dekstop-home.png)
-![](./screenshots/dekstop-crew.png)
-![](./screenshots/tablet-destination.png)
-![](./screenshots/mobile-nav.png)
+<img src="./screenshots/desktop-home.png" alt="Desktop Home" width="400" />
+<img src="./screenshots/desktop-crew.png" alt="Desktop Crew" width="400" />
+<img src="./screenshots/tablet-destination.png" alt="Tablet Destination" width="300" />
+<img src="./screenshots/mobile-nav.png" alt="Mobile Nav" width="200" />
 
 ### Links
 
