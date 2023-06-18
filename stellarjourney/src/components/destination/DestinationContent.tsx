@@ -3,15 +3,15 @@
 import Image from 'next/image';
 import { useStore } from '@/store/store';
 
-import styles from './destination-item.module.scss';
+import styles from './destination-content.module.scss';
 import DestinationNav from './DestinationNav';
 
-function DestinationItem() {
+function DestinationContent() {
   const destinations = useStore((state) => state.destinations);
   const current = useStore((state) => state.currentDestination);
 
   return (
-    <div className={styles['dest-item']}>
+    <div className={styles['dest-content']}>
       <div className={styles['dest-image-container']}>
         <div className={styles['image-wrapper']}>
           <Image
@@ -41,4 +41,4 @@ function DestinationItem() {
   );
 }
 
-export default DestinationItem;
+export default DestinationContent;

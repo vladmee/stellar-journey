@@ -3,15 +3,15 @@
 import Image from 'next/image';
 import { useStore } from '@/store/store';
 
-import styles from './crew-item.module.scss';
+import styles from './crew-content.module.scss';
 import CrewNav from './CrewNav';
 
-function CrewItem() {
+function CrewContent() {
   const crew = useStore((state) => state.crew);
   const current = useStore((state) => state.currentCrew);
 
   return (
-    <div className={styles['crew-item']}>
+    <div className={styles['crew-content']}>
       <div className={styles['crew-info-container']}>
         <div className={styles['crew-content']}>
           <h4>{crew[current].role}</h4>
@@ -34,4 +34,4 @@ function CrewItem() {
   );
 }
 
-export default CrewItem;
+export default CrewContent;

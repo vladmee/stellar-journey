@@ -1,4 +1,4 @@
-import TechnologyItem from '@/components/technology/TechnologyItem';
+import TechnologyContent from '@/components/technology/TechnologyContent';
 import StoreInitializer from '@/components/technology/StoreInitializer';
 import { Technology } from '@/data/types';
 
@@ -13,7 +13,7 @@ export default async function Technology() {
   return (
     <>
       <StoreInitializer technology={data} />
-      <TechnologyItem />
+      <TechnologyContent />
     </>
   );
 }

@@ -1,4 +1,4 @@
-import CrewItem from '@/components/crew/CrewItem';
+import CrewContent from '@/components/crew/CrewContent';
 import StoreInitializer from '@/components/crew/StoreInitializer';
 import { CrewMember } from '@/data/types';
 
@@ -13,7 +13,7 @@ export default async function Destination() {
   return (
     <>
       <StoreInitializer crew={data} />
-      <CrewItem />
+      <CrewContent />
     </>
   );
 }

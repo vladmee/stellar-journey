@@ -3,15 +3,15 @@
 import Image from 'next/image';
 import { useStore } from '@/store/store';
 
-import styles from './technology-item.module.scss';
+import styles from './technology-content.module.scss';
 import TechnologyNav from './TechnologyNav';
 
-function TechnologyItem() {
+function TechnologyContent() {
   const technology = useStore((state) => state.technology);
   const current = useStore((state) => state.currentTechnology);
 
   return (
-    <div className={styles['technology-item']}>
+    <div className={styles['technology-content']}>
       <div className={styles['technology-image-container']}>
         <Image
           src={technology[current].images.portrait}
@@ -38,4 +38,4 @@ function TechnologyItem() {
   );
 }
 
-export default TechnologyItem;
+export default TechnologyContent;

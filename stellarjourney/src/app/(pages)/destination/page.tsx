@@ -1,4 +1,4 @@
-import DestinationItem from '@/components/destination/DestinationItem';
+import DestinationContent from '@/components/destination/DestinationContent';
 
 import StoreInitializer from '@/components/destination/StoreInitializer';
 import { Destination } from '@/data/types';
@@ -14,7 +14,7 @@ export default async function Destination() {
   return (
     <div>
       <StoreInitializer destinations={data} />
-      <DestinationItem />
+      <DestinationContent />
     </div>
   );
 }
