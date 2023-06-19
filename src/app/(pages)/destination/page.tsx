@@ -6,7 +6,7 @@ import { Destination } from '@/data/types';
 import { useStore } from '@/store/store';
 
 export default async function Destination() {
-  const baseUrl = process.env.BASE_URL;
+  const baseUrl = process.env.NEXT_PUBLIC_HOSTNAME;
   const dataRes = await fetch(`${baseUrl}/api/destinations`);
   const data = (await dataRes.json()) as Destination[];
 
