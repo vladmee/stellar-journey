@@ -5,7 +5,8 @@ import { Technology } from '@/data/types';
 import { useStore } from '@/store/store';
 
 export default async function Technology() {
-  const dataRes = await fetch('/api/technology');
+  const baseUrl = process.env.BASE_URL;
+  const dataRes = await fetch(`${baseUrl}/api/technology`);
   const data = (await dataRes.json()) as Technology[];
 
   useStore.setState({ technology: data });
