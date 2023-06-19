@@ -24,7 +24,7 @@
 
 ### Links
 
-- Live Site URL: [vladmee.github.io/stellar-journey](https://vladmee.github.io/stellar-journey/)
+- Live Site URL: [stellar-journey.vercel.app](https://stellar-journey.vercel.app/)
 
 ## My process
 
@@ -55,8 +55,11 @@ When it comes to styling, I initially wrote all the styles using my prior knowle
 
 ### Continued development
 
-- Implement React Router
-- Enhance persistent state
+- Add styled 404 page
+- Add loading state for images
+- Style the error state ("Failed to fetch data" message)
+- Enhance persistent state by storing user choices in localstorage
+- Implement React Router (the Next router can be limiting for future development)
 - Implement testing with Jest and Cypress
 
 ## Author
