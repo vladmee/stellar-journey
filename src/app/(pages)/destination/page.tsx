@@ -14,6 +14,8 @@ export default async function Destination() {
     data = (await dataRes.json()) as Destination[];
   } catch (error) {
     console.error('Failed to fetch data:', error);
+
+    return <div>Failed to load data</div>;
   }
 
   useStore.setState({ destinations: data });

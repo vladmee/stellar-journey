@@ -13,6 +13,8 @@ export default async function Technology() {
     data = (await dataRes.json()) as Technology[];
   } catch (error) {
     console.error('Failed to fetch data:', error);
+
+    return <div>Failed to load data</div>;
   }
 
   useStore.setState({ technology: data });
