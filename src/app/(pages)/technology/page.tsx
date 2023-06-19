@@ -5,7 +5,7 @@ import { Technology } from '@/data/types';
 import { useStore } from '@/store/store';
 
 export default async function Technology() {
-  const dataRes = await fetch('http://localhost:3000/api/technology');
+  const dataRes = await fetch('/api/technology');
   const data = (await dataRes.json()) as Technology[];
 
   useStore.setState({ technology: data });
