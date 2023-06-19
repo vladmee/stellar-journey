@@ -2,7 +2,7 @@
 const path = require('path');
 
 const nextConfig = {
-  BASE_URL: process.env.BASE_URL,
+  NEXT_PUBLIC_HOSTNAME: process.env.NEXT_PUBLIC_HOSTNAME,
   sassOptions: {
     includePaths: [path.join(__dirname, './src/styles')],
   },
